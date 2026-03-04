@@ -1,85 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gs Retail</title>
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <section id="Gs_wrap">
-        <div class="member">
-            <div class="title">
-                <h2><span>GS리테일</span> 멤버십</h2>
-            </div>
-            <div class="member_content">
-                <h3>TOP스위트 아메리카노</h3>
-                <p>2,200</p>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkinRx</title>
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="gnb">
+      <div class="container gnb_inner">
+        <h6><a href="#">즐겨찾기</a><span class="ir_pm"></span></h6>
+        <h2 class="ir_so">유틸리티 메뉴</h2>
+        <ul>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">MY</a><span class="ir_pm">하트아이콘</span></li>
+          <li><a href="#">MY SKINRx</a><span class="ir_pm">다운아이콘</span></li>
+          <li><a href="#">주문배송</a></li>
+          <li><a href="#">장바구니</a><span class="ir_pm">장바구니아이콘</span></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- //gnb -->
+
+    <header id="header">
+      <div class="container">
+        <div class="header_inner">
+          <ul class="menu">
+            <li><a href="#" class="bar">TOP SELLER</a></li>
+            <li><a href="#" class="bar">EVENT</a></li>
+            <li><a href="#">BEAUTY TESTER</a></li>
+          </ul>
+          <h1 class="logo">
+            <a href="#">SKIN <span>Rx</span></a>
+          </h1>
+          <form class="search_box" role="search">
+            <label for="searchinput" class="ir_so">상품검색</label>
+            <input type="text" id="searchinput" placeholder="인바디, 이제 집에서 하세요!" />
+            <button type="submit"><span class="ir_so">버튼</span></button>
+          </form>
         </div>
-        <div class="youtube">
-            <div class="title">
-                <h2><span>GS리테일</span> Youtube</h2>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <nav id="nav" aria-label="상품 카테고리">
+      <div class="container">
+        <ul>
+          <li><a href="#" title="MY BRAND">MY BRAND</a></li>
+          <li><a href="#" title="SKIN CARE">SKIN CARE</a></li>
+          <li><a href="#" title="BODY & HAIR">BODY &amp; HAIR</a></li>
+          <li><a href="#" title="MAKE UP">MAKE UP</a></li>
+          <li><a href="#" title="HEALTH BEAUTY">HEALTH BEAUTY</a></li>
+          <li><a href="#" title="FRAGRANCE">FRAGRANCE</a></li>
+          <li><a href="#" title="MEN">MEN</a></li>
+          <li><a href="#" title="MOM & BABY">MOM &amp; BABY</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- //nav -->
+
+    <main id="main">
+      <div class="container">
+        <section class="main_banner" aria-label="메인프로모션배너">
+          <h2 class="ir_so">메인배너</h2>
+          <div class="rolling_banner">
+            <img src="img/main_roll01.png" alt="LOTUS이미지" />
+          </div>
+          <div class="feature_item">
+            <figcaption>feature item</figcaption>
+            <figure class="feature_img">
+              <a href="#"><img src="img/feature_item.png" alt="" /></a>
+            </figure>
+            <div class="item_txt">
+              <ul>
+                <li>Royal Apothic</li>
+                <li>로얄아포틱 홀랜드파크 핸드크림로얄아포틱 홀랜드파크 핸드크림</li>
+                <li>
+                  <span class="money">19,000</span>
+                  <span class="cancle">23,750</span>
+                </li>
+              </ul>
             </div>
-            <div class="youtube_content">
-                <h3>GS리테일의 공식<br>Youtube 채널</h3>
-                <p>다양하고 재미있는 GS리테일만의 동영상을 확인해 보세요.</p>
-                <div class="youtube_video">
-                    <iframe width="185" height="122" src="https://www.youtube.com/embed/oNJZSoK3imc?si=KyFKO58zaXAx_8xK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-        <div class="service">
-            <div class="title">
-                <h2><span>GS리테일</span> 빠른 서비스</h2>
-            </div>
-            <div class="service_content">
-                <div class="service_cont1">
-                    <div class="chk"></div>
-                    <div class="desc">
-                        <strong>출석체크</strong>
-                        <span>매일매일 출석체크</span>
-                    </div>
-                </div>
-                <div class="service_cont2">
-                    <div class="consult"></div>
-                    <div class="desc">
-                        <strong>입점상담</strong>
-                        <span>GS리테일 입점안내!</span>
-                    </div>
-                </div>
-                <div class="service_cont3">
-                    <div class="membership"></div>
-                    <div class="desc">
-                        <strong>멤버십 카드등록</strong>
-                        <span>풍성한 적립과</span>
-                        <span>실속있는 혜택!</span>
-                    </div>
-                </div>
-                <div class="service_cont4">
-                    <div class="recurt"></div>
-                    <div class="desc">
-                        <strong>채용안내</strong>
-                        <span>꿈과 열정으로</span>
-                        <span>도전하세요.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="point">
-            <h2>GS<span>&</span>POINT</h2>
-            <p>무한 혜택 알아보기</p>
-        </div>
-        <div class="notice">
+          </div>
+          <div class="main_event">
+            <span class="ir_so">메인 이벤트</span>
+          </div>
+        </section>
+        <!-- //main banner -->
+
+        <section class="special_picks" aria-label="스페셜 상품">
+          <div class="title">
+            <h2>SPECIAL PICKS</h2>
+          </div>
+          <div class="pick_menu">
             <ul>
-                <li><span class="note">공지사항</span><span class="more">더보기</span></li>
-                <li>&#8231;[GS25]나만의 냉장고 리뉴얼 오픈 안내<span class="date">2026.03.03</span></li>
-                <li>&#8231;[전체]2월이 매일매일 달콤한 사랑고백<span class="date">2026.03.03</span></li>
+              <li>
+                <a href="#">NOW ON SKINRx<span class="triangle"></span></a>
+              </li>
+              <li>
+                <a href="#">HOT ISSUE ITEM<span class="triangle"></span></a>
+              </li>
+              <li>
+                <a href="#">SEASON HOT<span class="triangle"></span></a>
+              </li>
+              <li>
+                <a href="#">SPECIAL PRICE<span class="triangle"></span></a>
+              </li>
             </ul>
-        </div>
-    </section>
-</body>
+          </div>
+          <div class="pick_box">
+            <div class="pick">
+              <div class="pick_img"><img src="img/spe_product01.png" alt="" /></div>
+              <div class="pick_icon ir_pm">단독</div>
+              <div class="item_txt">
+                <ul>
+                  <li>Royal Apothic</li>
+                  <li>로얄아포틱 홀랜드파크 핸드크림로얄아포틱 홀랜드파크 핸드크림</li>
+                  <li>
+                    <span class="money">19,000</span>
+                    <span class="cancle">23,750</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pick">
+              <div class="pick_img"><img src="img/spe_product02.png" alt="" /></div>
+              <div class="pick_icon ir_pm icon02">무료배송</div>
+              <div class="item_txt">
+                <ul>
+                  <li>Royal Apothic</li>
+                  <li>로얄아포틱 홀랜드파크 핸드크림로얄아포틱 홀랜드파크 핸드크림</li>
+                  <li>
+                    <span class="money">19,000</span>
+                    <span class="cancle">23,750</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pick">
+              <div class="pick_img"><img src="img/spe_product03.png" alt="" /></div>
+              <div class="pick_icon ir_pm">단독</div>
+              <div class="item_txt">
+                <ul>
+                  <li>Royal Apothic</li>
+                  <li>로얄아포틱 홀랜드파크 핸드크림로얄아포틱 홀랜드파크 핸드크림</li>
+                  <li>
+                    <span class="money">19,000</span>
+                    <span class="cancle">23,750</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="pick">
+              <div class="pick_img"><img src="img/spe_product04.png" alt="" /></div>
+              <div class="pick_icon ir_pm icon04">쿠폰</div>
+              <div class="item_txt">
+                <ul>
+                  <li>Royal Apothic</li>
+                  <li>로얄아포틱 홀랜드파크 핸드크림로얄아포틱 홀랜드파크 핸드크림</li>
+                  <li>
+                    <span class="money">19,000</span>
+                    <span class="cancle">23,750</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //special pick -->
+
+        <section class="magazine" aria-label="매거진"></section>
+        <!-- //magazine -->
+
+        <section class="brand focus" aria-label="브랜드 포커스">
+          <div class="title">
+            <h2>BRAND FOCUS</h2>
+          </div>
+        </section>
+        <!-- //brand focus -->
+      </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">footer</footer>
+    <!-- //footer -->
+  </body>
 </html>

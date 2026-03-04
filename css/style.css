@@ -1,179 +1,324 @@
 /* layout */
-#Gs_wrap {
-    width: 958px;
-    height: 449px;
-    margin: 0 auto;
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+#gnb {
+  width: 100%;
+  height: 32px;
+  background-color: black;
 }
-.member {
-    width: 226px;
+#header {
 }
-.youtube {
-    width: 226px;
+#nav {
 }
-.service {
-    width: 466px;
+#main {
 }
-.point {
-    width: 226px;
-    height: 110px;
+#footer {
 }
-.notice {
-    width: 712px;
-    height: 110px;
-    border: 1px solid #333;
-    box-sizing: border-box;
+
+/* container */
+.container {
+  width: 944px;
+  margin: 0 auto;
 }
-/* title */
+
+/* gnb */
+.gnb_inner {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#gnb h6 {
+  font-size: 0.8em;
+}
+#gnb h6 a {
+  color: #fff;
+}
+#gnb h6 a:hover {
+  color: aqua;
+}
+#gnb ul {
+  display: flex;
+}
+#gnb ul li {
+  padding: 0 9px;
+}
+#gnb ul li a {
+  font-size: 0.85em;
+  color: #fff;
+}
+#gnb ul li a:hover {
+  color: aqua;
+}
+
+/* 이미지를 표현하는 방법
+  1) HTML 태그를 통해 표현하는 방법 ex) <img src="" alt="">
+    - 중요한 이미지를 표현할 때, 배너 등등
+  2) css 속성값을 통해 표현하는 방법 ex) {backgroun: ....}
+  3) 이미지 스프라이트 방법 : 아이콘 종류에 많이 쓰인다. */
+
+/* 아이콘 */
+#gnb h6 span {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background: url(../img/icons.png) -350px 1px;
+  margin-left: 3px;
+}
+#gnb ul li span {
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  background: url(../img/icons.png) 0 0;
+  margin-left: 4px;
+}
+#gnb ul li:nth-child(3) span {
+  background-position: -299px 2px;
+}
+#gnb ul li:nth-child(4) span {
+  background-position: -200px 2px;
+}
+#gnb ul li:nth-child(6) span {
+  background-position: -250px 2px;
+}
+
+/* header */
+.header_inner {
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul.menu {
+  display: flex;
+}
+ul.menu li {
+}
+ul.menu li:first-child {
+  padding-left: 0;
+}
+ul.menu li a {
+  display: block;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+  /* 절대좌표의 기준점 */
+}
+
+/* 가상요소 : css에서 문자를 넣을 수 있음 */
+ul.menu li a.bar::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #ff8d8d;
+  position: absolute;
+  top: 3;
+  right: 0;
+}
+
+ul.menu li a:hover {
+  color: aqua;
+}
+
+h1.logo {
+  font-family: "Cormorant", serif;
+  font-size: 4em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h1.logo a {
+  color: #1b1b1b;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+h1.logo a span {
+  font-weight: 300;
+  color: #5c5c5c;
+}
+
+.search_box {
+  display: flex;
+  border: 1px solid #000;
+}
+.search_box input {
+  width: 164px;
+  height: 36px;
+  padding-left: 10px;
+}
+.search_box button {
+  width: 36px;
+  height: 36px;
+  background: url(../img/lip.png) no-repeat center;
+  background-size: 90%;
+  cursor: pointer;
+}
+
+/* nav */
+#nav ul {
+  display: flex;
+  justify-content: space-around;
+  border-top: 5px solid #383838;
+}
+#nav ul li {
+  font-family: "Kanit", sans-serif;
+}
+#nav ul li a {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 18px 0;
+}
+#nav ul li a:hover {
+  color: #ff8d8d;
+}
+
+/* main */
+.main_banner {
+  display: grid;
+  grid-template-columns: 624px 304px;
+  grid-template-rows: 304px 136px;
+  grid-template-areas:
+    "rolling feature"
+    "rolling event";
+  gap: 16px;
+}
+.rolling_banner {
+  grid-area: rolling;
+}
+.feature_item {
+  grid-area: feature;
+  border: 1px solid #cfcfcf;
+}
+.main_event {
+  grid-area: event;
+  background: url(../img/main_event.png);
+}
+
+.feature_item figcaption {
+  font-size: 1.8em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  padding-top: 10px;
+}
+.feature_item figure.feature_img {
+  text-align: center;
+}
+
+/* item_txt */
+.item_txt {
+}
+.item_txt ul {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.item_txt ul li {
+  margin-bottom: 3px;
+}
+.item_txt ul li:first-child {
+  font-weight: 800;
+  color: #191919;
+}
+.item_txt ul li:nth-child(2) {
+  color: #4d4d4d;
+  /* 한줄 글자 생략 삼총사 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_txt ul li span.money {
+  color: #1b1b1b;
+  font-weight: 800;
+  margin-right: 8px;
+}
+.item_txt ul li span.cancle {
+  color: #adadad;
+  text-decoration: line-through;
+}
+
+/* title 시작 - 메인 안에 섹션별로 사용*/
 .title {
-    height: 44px;
+  height: 46px;
+  border-top: 3px solid #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title h2 {
-    font-size: 22px;
+  font-family: "Kanit", sans-serif;
+  font-size: 2em;
+  letter-spacing: 5px;
+  color: #383838;
 }
-.title h2 span {
-    color: #216fed;
+/* title 끝 */
+
+/* special_picks */
+.special_picks {
+  margin-top: 50px;
 }
-/* member */
-.member_content {
-    height: 275px;
-    background: url(../img/sweet.jpg) no-repeat;
-    text-align: center;
-    border: 1px solid #a0a0a0;
-    box-sizing: border-box;
+.pick_menu {
+  border-top: 2px dotted rgb(116, 116, 116);
 }
-.member_content h3 {
-    padding-top: 215px;
-    font-size: 18px;
-    letter-spacing: -0.5px;
+.pick_menu ul {
+  display: flex;
+  justify-content: center;
+  border-top: 2px dotted rgb(116, 116, 116);
 }
-.member_content p {
-    font-size: 14px;
-    margin-top: 3px;
-    background: url(../img/won.jpg) no-repeat 35%;
+.pick_menu ul li {
+  padding: 0 15px;
+}
+.pick_menu ul li a {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.pick_menu ul li a:hover {
+  border-top: 4px solid #ff78b7;
+  margin-top: -4px;
+  color: #ff78b7;
 }
 
-/* Youtube */
-.youtube_content {
-    height: 275px;
-    background: url(../img/youtube_icon.jpg) no-repeat 20px 30px;
-    border: 1px solid #a0a0a0;
-    box-sizing: border-box;
-}
-.youtube_content h3 {
-    margin-left: 70px;
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 22px;
-}
-.youtube_content p {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 12px;
-    margin-top: 5px;
-    line-height: 18px;
-}
-.youtube_video {
-    width: 185px;
-    height: 122px;
-    margin-left: 20px;
-    margin-top: 10px;
+/* 삼각형 만들기 - 가상요소, 보더의 성질 이용 */
+.triangle::after {
+  content: "";
+  border-top: 5px solid #ff78b7;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
 }
 
-/* service */
-.service_content {
-    height: 275px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #a0a0a0;
-    box-sizing: border-box;
+.pick_menu ul li a:hover .triangle::after {
+  opacity: 1;
 }
-.service_cont1, .service_cont2 {
-    width: 232px;
-    height: 136px;
-    box-sizing: border-box;
-    display: flex;
-    padding: 40px 0 40px 30px;
+.pick_box {
+  display: flex;
 }
-.service_cont3, .service_cont4 {
-    width: 232px;
-    height: 137px;
-    box-sizing: border-box;
-    display: flex;
-    padding: 40px 0 40px 30px;
+.pick {
+  width: 25%;
+  text-align: center;
 }
-.service_cont1 {
-    border-right: 1px solid #a0a0a0;
-    border-bottom: 1px solid #a0a0a0;
+.pick .pick_img {
+  padding: 15px 0;
 }
-.service_cont2 {
-    border-bottom: 1px solid #a0a0a0;
+.pick_icon {
+  width: 27px;
+  height: 16px;
+  background: #ff78b7 url(../img/icons.png) no-repeat 0 0;
+  display: inline-block;
 }
-.service_cont3 {
-    border-right: 1px solid #a0a0a0;
+.icon02 {
+  width: 48px;
+  background-position: -50px 0;
 }
-.chk, .consult, .membership, .recurt {
-    width: 56px;
-    height: 50px;
-    background-color: #f2ffa8;
-    margin-right: 12px;
-}
-.desc>strong,
-.desc>span {
-    display: block;
-}
-.desc>strong {
-    font-size: 17px;
-}
-.desc>span {
-    font-size: 11px;
-}
-.chk {background: url(../img/check.jpg) no-repeat;}
-.consult {background: url(../img/consult.jpg) no-repeat;}
-.membership {background: url(../img/membership.jpg) no-repeat;}
-.recurt {background: url(../img/recurt.jpg) no-repeat;}
-
-/* point */
-.point {
-    background: #00a6a6 url(../img/gs_point.jpg) no-repeat 24px 25px;
-}
-.point h2 {
-    padding-top: 25px;
-    margin-left: 82px;
-    color: #fff;
-    font-size: 22px;
-}
-.point h2 span {
-    font-weight: 300;
-}
-.point p {
-    margin-left: 80px;
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: -0.5px;
-}
-/* notice */
-.notice ul {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 25px;
-}
-.notice ul li {
-    margin-bottom: 2px;
-}
-.notice ul li span.note {
-    font-size: 15px;
-    font-weight: bold;
-}
-.notice ul li span.more {
-    float: right;
-    background: url(../img/plus.jpg) no-repeat right -5px;
-    padding-right: 15px;
-}
-.notice ul li span.date {
-    float: right;
-
+.icon04 {
+  background-position: -150px 0;
 }
